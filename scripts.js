@@ -2,6 +2,6 @@ let pokemonList = [{name:"Alakazam", height:1.5,type:"Psychic"},{name:"Meowth", 
 
 
 for (let i = 0; i < pokemonList.length; i++){
-    console.log(pokemonList[i]);
-    
+    document.write(pokemonList.name[i]);
+
 }
