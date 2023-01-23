@@ -1,0 +1,1 @@
+let pokemonList = [{name:"", height:""},{name:"", height:""},{name:"",height:""}]
