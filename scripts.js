@@ -1,1 +1,1 @@
-let pokemonList = [{name:"", height:""},{name:"", height:""},{name:"",height:""}]
+let pokemonList = [{name:"", height:"",type:""},{name:"", height:"",type:""},{name:"",height:"",type:""}]
