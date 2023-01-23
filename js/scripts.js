@@ -7,7 +7,7 @@ let pokemonList = [
     {
     name:"Meowth", 
     height:0.4 , 
-    type:"Normal"
+    type:["Normal"]
     },
     {
     name:"Onix",
