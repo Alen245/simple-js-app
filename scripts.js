@@ -1,1 +1,1 @@
-let pokemonList = [{name:"Alakazam", height:1.5,type:"Psychic"},{name:"Meowth", height:0.4 , type:"Normal"},{name:"Onix",height:8.8 , type:"Rock/Ground"}]
+let pokemonList = [{name:"Alakazam", height:1.5,type:"Psychic"},{name:"Meowth", height:0.4 , type:"Normal"},{name:"Onix",height:8.8 , type:["Rock","Earth"]}]
