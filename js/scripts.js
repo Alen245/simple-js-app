@@ -32,6 +32,8 @@ return {
 })();
 
 
+/*Before change
+
 pokemonList.forEach(function(pokemon){
     document.write( pokemon.name + "'s height is: " + pokemon.height + "</p> " );
     if (pokemon.height >= 1.2)
@@ -39,4 +41,14 @@ pokemonList.forEach(function(pokemon){
            document.write(" Wow, that's big!" +"</p>")
      }
 
+});
+
+*/
+
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write( pokemon.name + "'s height is: " + pokemon.height + "</p> " );
+    if (pokemon.height >= 1.2)
+    {
+           document.write(" Wow, that's big!" +"</p>")
+     }
 });
