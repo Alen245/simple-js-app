@@ -24,4 +24,4 @@ pokemonList.forEach(function(pokemon){
            document.write(" Wow, that's big!" +"</p>")
      }
 
-});
+})();
