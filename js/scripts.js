@@ -1,4 +1,4 @@
-let pokemonList = [
+const pokemonList = [
     {
         name:"Alakazam", 
         height:1.5,
