@@ -1,3 +1,4 @@
+
 const pokemonList = [
     {
         name:"Alakazam", 
@@ -14,7 +15,7 @@ const pokemonList = [
     height:8.8 , 
     type:["Rock","Earth"]
     }
-];
+]();
 
 
 pokemonList.forEach(function(pokemon){
@@ -24,4 +25,4 @@ pokemonList.forEach(function(pokemon){
            document.write(" Wow, that's big!" +"</p>")
      }
 
-})();
+});
