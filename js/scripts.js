@@ -14,9 +14,7 @@ const pokemonList = [
     name:"Onix",
     height:8.8 , 
     type:["Rock","Earth"]
-    }
-
-]
+    } ]
 function add(pokemon) {
   pokemonList.push(pokemon);
 }
