@@ -17,6 +17,18 @@ const pokemonList = [
     }
 
 ]
+function add(pokemon) {
+  pokemonList.push(pokemon);
+}
+
+function getAll() {
+  return pokemonList;
+}
+
+return {
+  add: add,
+  getAll: getAll
+};
 })();
 
 
