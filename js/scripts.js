@@ -44,9 +44,11 @@ pokemonList.forEach(function(pokemon){
 */
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  document.write( pokemon.name + "'s height is: " + pokemon.height + "</p> " );
-    if (pokemon.height >= 1.2)
-    {
-           document.write(" Wow, that's big!" +"</p>")
-     }
+  let pokemonList = document.querySelector(".pokemon-list");
+  let listpokemon = document.createElement("li");
+  let button = document.createElement("button");
+  button.innerText = "placeholder";
+  button.classList.add("button-class");
+  listpokemon.appendChild(button);
+  pokemonList.appendChild(listpokemon);
 });
