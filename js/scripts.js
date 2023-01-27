@@ -30,15 +30,27 @@ function addListItem(pokemon){
   button.classList.add("button-class");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
+  button.addEventListener("click", 
+  function(Event) {
+    showDetails(pokemon);
+   });
+
 
 }
 return {
   add: add,
   getAll: getAll,
-  addListItem: addListItem
+  addListItem: addListItem,
+  showDetails: showDetails
+
 };
 })();
 
+function showDetails (pokemon) {
+  console.log(pokemon);
+  }
+
+  document.createElement('button')
 
 /*Before change
 
