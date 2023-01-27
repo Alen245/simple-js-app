@@ -41,14 +41,14 @@ return {
   add: add,
   getAll: getAll,
   addListItem: addListItem,
-  showDetails: showDetails
+  
 
 };
 })();
 
 function showDetails (pokemon) {
   console.log(pokemon);
-  }
+  };
 
   document.createElement('button')
 
