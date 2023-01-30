@@ -59,12 +59,7 @@ function loadDetails(item) {
   });
 }
 
-return {
-  add: add,
-  getAll: getAll,
-  loadList: loadList
-};
-})();
+
 
 pokemonRepository.loadList().then(function() {
 // Now the data is loaded!
@@ -78,9 +73,8 @@ pokemonRepository.getAll().forEach(function(pokemon){
 return {
   add: add,
   getAll: getAll,
-  addListItem: addListItem,
-  
-
+  loadList: loadList,
+  loadDetails: loadDetails
 };
 })();
 
