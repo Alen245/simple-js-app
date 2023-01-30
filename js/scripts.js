@@ -1,20 +1,7 @@
 let pokemonRepository = (function () {
-const pokemonList = [
-    {
-        name:"Alakazam", 
-        height:1.5,
-        type:["Psychic"]
-    },
-    {
-    name:"Meowth", 
-    height:0.4 , 
-    type:["Normal"]
-    },
-    {
-    name:"Onix",
-    height:8.8 , 
-    type:["Rock","Earth"]
-    } ]
+  let pokemonList = [];
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+
 
     
 
@@ -41,6 +28,9 @@ function addListItem(pokemon){
 
 
 }
+
+
+
 return {
   add: add,
   getAll: getAll,
