@@ -6,7 +6,14 @@ let pokemonRepository = (function () {
     
 
 function add(pokemon) {
-  pokemonList.push(pokemon);
+ if(
+  typeof pokemon === "object" &&
+  "name" in pokemon
+ ) {
+  pokemonRepository.push(pokemon);
+ } else {
+  console.log ("pokemon is not correct");
+ }
 }
 
 function getAll() {
