@@ -84,20 +84,8 @@ function showDetails(pokemon) {
   });
 }
 
-  document.createElement('button')
+  
 
-/*Before change
-
-pokemonList.forEach(function(pokemon){
-    document.write( pokemon.name + "'s height is: " + pokemon.height + "</p> " );
-    if (pokemon.height >= 1.2)
-    {
-           document.write(" Wow, that's big!" +"</p>")
-     }
-
-});
-
-*/
 
 pokemonRepository.getAll().forEach(function(pokemon) {
   pokemonRepository.addListItem(pokemon);
