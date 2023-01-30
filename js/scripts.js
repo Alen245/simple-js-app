@@ -25,8 +25,6 @@ function addListItem(pokemon){
   function(Event) {
     showDetails(pokemon);
    });
-
-
 }
 
 function loadList() {
@@ -44,6 +42,7 @@ function loadList() {
     console.error(e);
   })
 }
+
 
 function loadDetails(item) {
   let url = item.detailsUrl;
