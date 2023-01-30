@@ -49,28 +49,19 @@ function loadList() {
     console.error(e);
   })
 }
-return {
-  add: add,
-  getAll: getAll,
-  loadList: loadList,
-  loadDetails: loadDetails
-};
-})();
-
-
-
-
-
-pokemonRepository.loadList().then(function() {
-// Now the data is loaded!
-pokemonRepository.getAll().forEach(function(pokemon){
-  pokemonRepository.addListItem(pokemon);
-});
-});
-
-
-
-
+function loadDetails(item) {
+  let url = item.detailsUrl;
+  return fetch(url).then(function (response) {
+    return response.json();
+  }).then(function (details) {
+    // Now we add the details to the item
+    item.imageUrl = details.sprites.front_default;
+    item.height = details.height;
+    item.types = details.types;
+  }).catch(function (e) {
+    console.error(e);
+  });
+}
 
 function showDetails(pokemon) {
   loadDetails(pokemon).then(function () {
@@ -78,10 +69,27 @@ function showDetails(pokemon) {
   });
 }
 
+return {
+  add: add,
+  getAll: getAll,
+  addListItem: addListItem,
+  loadList: loadList,
+  loadDetails: loadDetails,
+  showDetails: showDetails
   
+};
+})();
 
-
-pokemonRepository.getAll().forEach(function(pokemon) {
+pokemonRepository.loadList().then(function() {
+pokemonRepository.getAll().forEach(function(pokemon){
   pokemonRepository.addListItem(pokemon);
-  
+  });
 });
+
+
+
+
+
+  
+
+
