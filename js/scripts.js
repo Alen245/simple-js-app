@@ -44,11 +44,13 @@ function loadList() {
         detailsUrl: item.url
       };
       add(pokemon);
+      console.log(pokemon);
     });
   }).catch(function (e) {
     console.error(e);
   })
 }
+
 function loadDetails(item) {
   let url = item.detailsUrl;
   return fetch(url).then(function (response) {
@@ -63,11 +65,12 @@ function loadDetails(item) {
   });
 }
 
-function showDetails(pokemon) {
-  loadDetails(pokemon).then(function () {
-    console.log(pokemon);
+function showDetails(item) {
+  pokemonRepository.loadDetails(item).then(function () {
+    console.log(item);
   });
 }
+
 
 return {
   add: add,
