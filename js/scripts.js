@@ -78,9 +78,11 @@ return {
 };
 })();
 
-function showDetails (pokemon) {
-  console.log(pokemon);
-  };
+function showDetails(pokemon) {
+  loadDetails(pokemon).then(function () {
+    console.log(pokemon);
+  });
+}
 
   document.createElement('button')
 
