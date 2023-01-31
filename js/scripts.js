@@ -67,7 +67,73 @@ function loadDetails(item) {
 
 function showDetails(item) {
   pokemonRepository.loadDetails(item).then(function () {
-    console.log(item);
+   //modal starts
+   let modalContainer = document.querySelector ('#modal-container');
+
+   modalContainer.innerHTML = '';
+
+   let modal = document.createElement('div');
+   modal.classList.add ('modal');
+
+   let sprite = document.createElement('img');
+   sprite.classList.add('sprite');
+   sprite.src = item.imageUrl;
+
+   let closeButtonElement = document.createElement('button');
+   closeButtonElement.innerText = 'X';
+   closeButtonElement.addEventListener('click', hideModal)
+
+   let titleElement = document.createElement ('h1');
+   titleElement.innerText =  (item.name);
+
+   let contentElement = document.createElement ('p');
+
+   let pokemonTypes = "";
+
+     // for loop used to iterate through the item.types object.
+     for (let i = 0; i < item.types.length; i++) {
+      //name of the current type is concatenated to the typeNames variable (appending to the end of the string)
+      pokemonTypes += item.types[i].type.name;
+      //if i is less than length - 1, a comma and space are added to typeNames (to avoid adding comma after las type)
+      if (i < item.types.length - 1) {
+          pokemonTypes += ", ";
+      }
+  }
+
+  // value of typeNames is then assigned to the innertext property of contentElement.
+  contentElement.innerText =('Height: ' + item.height + '\n' +  '\n' + 'Types: ' + pokemonTypes);
+
+
+  modal.appendChild (closeButtonElement);
+  modal.appendChild (titleElement);
+  modal.appendChild (contentElement);
+  modalContainer.appendChild (modal);
+  modal.appendChild (sprite);
+
+
+  modalContainer.classList.add('is-visible');
+
+
+function hideModal (){
+  modalContainer.classList.remove ('is-visible');
+}
+
+window.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
+    hideModal();
+  }
+});
+
+modalContainer.addEventListener('click', (e) => {
+let target = e.target;
+if (target === modalContainer) {
+  hideModal();
+}
+});
+
+document.querySelector ('button.button-class').addEventListener('click', () => {
+  showDetails ('Modal Title', 'Modal Content');
+});
   });
 }
 
