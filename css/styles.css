@@ -1,5 +1,8 @@
+body{
+    background-color: rgb(98, 215, 143);
+}
 .button-class {
-    color: rgb(255, 255, 255);
+    color: black;
     display: inline-block;
     text-transform: capitalize;
     text-align:center;
@@ -8,10 +11,10 @@
     margin:10px 0px;
     width: 210px;
     font-size: 15px;
-    background: #872732;
+    background: yellow;
     border-radius: 30px;
     font-weight: 800;
-    box-shadow: 5px 5px 0px 0px #000;
+    box-shadow: 5px 5px 0px 0px rgb(96, 190, 190);
     border-color: rgb(255, 255, 255);
 }
 
