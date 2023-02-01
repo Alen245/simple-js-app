@@ -67,7 +67,7 @@ function loadDetails(item) {
 
 function showDetails(item) {
   pokemonRepository.loadDetails(item).then(function () {
-   //modal starts
+   //modal starts, need review of what is happening here^
    let modalContainer = document.querySelector ('#modal-container');
 
    modalContainer.innerHTML = '';
