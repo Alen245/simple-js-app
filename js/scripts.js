@@ -99,7 +99,7 @@ function showDetails(item) {
           pokemonTypes += ", ";
       }
   }
-
+//need to figure out this one as well^
   
   contentElement.innerText =('Height: ' + item.height + '\n' +  '\n' + 'Types: ' + pokemonTypes);
 
