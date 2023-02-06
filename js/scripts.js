@@ -4,7 +4,7 @@ let pokemonRepository = (function () {
 
 
     
-
+// promise for if object and name exist, then add pokemon to list
 function add(pokemon) {
  if(
   typeof pokemon === "object" &&
@@ -19,7 +19,7 @@ function add(pokemon) {
 function getAll() {
   return pokemonList;
 }
-
+// add pokemon button to page and allow it to show details when clicked
 function addListItem(pokemon){
   let pokemonList = document.querySelector(".pokemon-list");
   let listpokemon = document.createElement("li");
@@ -33,7 +33,7 @@ function addListItem(pokemon){
     showDetails(pokemon);
    });
 }
-
+// take pokemon data from API using JSON. Check if name and url available.
 function loadList() {
   return fetch(apiUrl).then(function (response) {
     return response.json();
@@ -90,7 +90,7 @@ function showDetails(item) {
 
    let pokemonTypes = "";
 
-     
+     //need to figure out this one as well v
      for (let i = 0; i < item.types.length; i++) {
       
       pokemonTypes += item.types[i].type.name;
@@ -99,11 +99,11 @@ function showDetails(item) {
           pokemonTypes += ", ";
       }
   }
-//need to figure out this one as well^
-  
+
+// add string to details (p)  
   contentElement.innerText =('Height: ' + item.height + '\n' +  '\n' + 'Types: ' + pokemonTypes);
 
-
+// adding all content to modal and modal to container element
   modal.appendChild (closeButtonElement);
   modal.appendChild (titleElement);
   modal.appendChild (contentElement);
@@ -117,20 +117,20 @@ function showDetails(item) {
 function hideModal (){
   modalContainer.classList.remove ('is-visible');
 }
-
+// hide modal if esc is pressed and is visible
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')){
     hideModal();
   }
 });
-
+// hide modal if container pressed
 modalContainer.addEventListener('click', (e) => {
 let target = e.target;
 if (target === modalContainer) {
   hideModal();
 }
 });
-
+// show details if pokemon button is pressed
 document.querySelector ('button.button-class').addEventListener('click', () => {
   showDetails ('Modal Title', 'Modal Content');
 });
