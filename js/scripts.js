@@ -21,11 +21,12 @@ function getAll() {
 }
 // add pokemon button to page and allow it to show details when clicked
 function addListItem(pokemon){
-  let pokemonList = document.querySelector(".pokemon-list");
+  let pokemonList = document.querySelector(".pokemon-list list-group");
   let listpokemon = document.createElement("li");
+  li.classList.add("group-list-item");
   let button = document.createElement("button");
   button.innerText = pokemon.name;
-  button.classList.add("button-class");
+  button.classList.add("button-class list-group");
   listpokemon.appendChild(button);
   pokemonList.appendChild(listpokemon);
   button.addEventListener("click", 
