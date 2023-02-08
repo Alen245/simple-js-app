@@ -1,7 +1,7 @@
 body{
     background-color: rgb(98, 215, 143);
 }
-/*.button-class {
+.button-class {
     color: black;
     display: inline-block;
     text-transform: capitalize;
@@ -16,7 +16,7 @@ body{
     font-weight: 800;
     box-shadow: 5px 5px 0px 0px rgb(96, 190, 190);
     border-color: rgb(255, 255, 255);
-} */
+} 
 
 #modal-container {
 display: none;
