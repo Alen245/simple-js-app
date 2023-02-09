@@ -35,13 +35,14 @@ body{
   }
 
   .list-group-item{
-    
+    margin: 0 20%;
     background-color:rgb(98, 215, 143);
+    border: none;
   }
 
   .pokemon-button{
-   width: 200px;
+   width: 33%;
    height: 200px;
-    border-radius: 10px;
-    font-size: larger;
+    border-radius: 20px;
+    font-size: 40px;
   }
