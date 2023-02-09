@@ -13,7 +13,7 @@ function getAll() {
 // add pokemon button to page and allow it to show details when clicked
 function addListItem(pokemon){
   let listItem = $('<li class="list-group-item"></li>');
-  let button = $('<button class="pokemon-button btn btn-info" data-target="#pokemon-modal" data-toggle="modal">' + pokemon.name + '</button>');
+  let button = $('<button class="pokemon-button btn btn-warning" data-target="#pokemon-modal" data-toggle="modal">' + pokemon.name + '</button>');
 
   listItem.append(button);
   pokemonListClass.append(listItem);

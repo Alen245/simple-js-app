@@ -1,9 +1,47 @@
 body{
     background-color: rgb(98, 215, 143);
 }
-.pokemon-button {
-    width: 40%;
-    background-color:yellow;
-    /* removes bootstrap button border color */
-    border: none;
+.pokemon-header {
+    padding: 10px;
+    font-weight: 700;
+  }
+
+  .pokedex {
+    text-align: center;
+    margin-top: 90px; 
+    display: flex;
+    flex-direction: column;
+  
+ 
+    
+  }
+  .modal {
+    text-align: center;
+    font-size: larger;
+
+  }
+  .modal-dialog{
+    position: fixed;
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    right: 0px;
+    
+
+  }
+  .pokemon-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .list-group-item{
+    
+    background-color:rgb(98, 215, 143);
+  }
+
+  .pokemon-button{
+   width: 200px;
+   height: 200px;
+    border-radius: 10px;
+    font-size: larger;
   }
