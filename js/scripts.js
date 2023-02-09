@@ -40,6 +40,8 @@ function loadList() {
     console.error(e);
   })
 }
+
+
 function loadDetails(item) {
   let url = item.detailsUrl;
   return fetch(url).then(function (response) {
@@ -53,13 +55,14 @@ function loadDetails(item) {
       console.error(e);
   });
 }
+
 function showDetails(pokemon){
   loadDetails(pokemon).then(function(){
-    showDetailsModal(pokemon);
+    loadDetailsModal(pokemon);
   });
 }
 
-function showDetailsModal(pokemon) {
+function loadDetailsModal(pokemon) {
   let modalBody = $('.modal-body');
   let modalTitle = $('.modal-title');
 
@@ -85,7 +88,7 @@ return {
   loadList: loadList,
   loadDetails: loadDetails,
   showDetails: showDetails,
-  showDetailsModal: showDetailsModal
+  loadDetailsModal: loadDetailsModal
 };
 })();
 pokemonRepository.loadList().then(function() {
