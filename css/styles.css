@@ -24,8 +24,8 @@ color: black;
   
     position: fixed;
     margin-left:auto;
-    width: 50%;
-    height: 100%;
+    width: auto;
+    height: auto;
 }
 .pokemon-img {
   width: 300px;
