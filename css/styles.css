@@ -18,6 +18,7 @@ color: black;
 .modal {
   text-align: center;
   font-size: larger;
+  width: auto;
  
 }
 .modal-dialog{
