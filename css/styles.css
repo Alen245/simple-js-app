@@ -19,12 +19,13 @@ color: black;
   text-align: center;
   font-size: larger;
   width: auto;
+  margin: auto;
  
 }
 .modal-dialog{
   
     position: fixed;
-    margin-left:auto;
+    margin:auto;
     width: auto;
     height: auto;
 }
