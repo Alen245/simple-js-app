@@ -23,15 +23,15 @@ color: black;
 }
 .modal-dialog{
   
-    position: fixed;
+    
     margin-left:33%;
     width: 50%;
     height: 100%;
 
 }
 .pokemon-img {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
 }
  .list-group-item{
  
