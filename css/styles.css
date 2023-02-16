@@ -16,10 +16,10 @@ color: black;
 
 }
 #pokemon-modal {
-  text-align: center;
-  font-size: larger;
-  width: auto;
-  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   justify-content: center;
  
 }
@@ -48,8 +48,8 @@ color: black;
   border: none;
   border-radius: 50px;
   margin: 10px;
-  height: 100px;
-  width: 200px;
+  height: 10%;
+  width: 20%;
   color: black;
   text-transform: capitalize;
   font-family: 'Pokemon Solid', sans-serif;
@@ -66,3 +66,8 @@ color: black;
   justify-content: center;
   max-width: auto;
 }
+
+
+  .modal-title {
+    font-size: 5vw;
+  }
