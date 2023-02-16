@@ -72,9 +72,9 @@ function loadDetailsModal(pokemon) {
   modalBody.empty();
   modalTitle.text(pokemon.name);
 
-  let height = $('<p>' + 'Height:  ' + pokemon.height + '</p>');
+  let height = $('<p id="details" >' + 'Height:  ' + pokemon.height + '</p>');
   let image = $('<img id="pokemon-img" src="' + pokemon.imageUrl + '" />');
-  let types = $('<p>' + 'Types:  ' + pokemon.types + '</p>');
+  let types = $('<p id="details" >' + 'Types:  ' + pokemon.types + '</p>');
  
     
   modalBody.append(image);

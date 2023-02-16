@@ -18,9 +18,10 @@ color: black;
 #pokemon-modal {
   position: fixed;
   top: 50%;
-  left: 50%;
+  margin-left:  50%;
   transform: translate(-50%, -50%);
   justify-content: center;
+ 
  
 }
 .modal-dialog{
@@ -28,9 +29,26 @@ color: black;
     position: fixed;
     margin:auto;
     width: auto;
-    height: auto;
+    
     justify-content: center;
 }
+
+.modal-content{
+  height: 90vh;
+}
+
+.modal-header{
+  height: 25%;
+}
+
+.modal-body{
+  height: 50%;
+}
+
+.modal-footer{
+  height:25%;
+}
+
 #pokemon-img {
   width: 50%;
   height: 50%;
@@ -69,5 +87,9 @@ color: black;
 
 
   .modal-title {
-    font-size: 5vw;
+    font-size: 6vw;
+    
+  }
+  #details{
+    font-size: 3vw;
   }
