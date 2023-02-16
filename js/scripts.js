@@ -2,7 +2,7 @@ let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   let pokemonListClass = $('.pokemon-list'); 
-// promise for if object and name exist, then add pokemon to list
+//add pokemon to list
 function add(pokemon) {
   pokemonList.push(pokemon);
 };
@@ -41,6 +41,7 @@ function loadList() {
   })
 }
 
+//fetching details from API(image,height,types)
 
 function loadDetails(item) {
   let url = item.detailsUrl;
@@ -61,6 +62,8 @@ function showDetails(pokemon){
     loadDetailsModal(pokemon);
   });
 }
+
+//defining modal title and body as variables, and appending details to them.
 
 function loadDetailsModal(pokemon) {
   let modalBody = $('.modal-body');
